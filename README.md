@@ -28,8 +28,40 @@ DESTINATION_CHANNEL_ID=your_destination_channel_id
 ADMIN_ID=your_telegram_user_id
 VERCEL_URL=your_App_name.vercel.app
 ```
-## Note 
-# Replace your webhookUrl `bot.js` file line No `515`
+### Note 
+## Replace your webhookUrl `bot.js` file line No `515`
+
+# 📌 Telegram Bot Webhook Setup Guide
+
+## 🔗 One-Click Webhook Setup 
+
+## 🌐 For Vercel/Heroku Users
+1. **Vercel**:
+
+```curl -X POST "https://api.telegram.org/botYOUR_BOT_TOKEN/setWebhook?url=https://YOUR_VERCEL_APP.vercel.app/webhook"
+```
+
+## ✅ Verification Command
+Check if webhook is set:
+```
+curl "https://api.telegram.org/botYOUR_BOT_TOKEN/getWebhookInfo"
+```
+
+## 🔄 Switch Back to Polling
+```
+curl -X POST "https://api.telegram.org/botYOUR_BOT_TOKEN/deleteWebhook"
+```
+
+2. **Heroku**:
+   ```
+   curl -X POST "https://api.telegram.org/botYOUR_BOT_TOKEN/setWebhook?url=https://YOUR_APP_NAME.herokuapp.com/webhook"
+   ```
+
+## ⚠️ Important Notes
+- Must use **HTTPS** (not HTTP)
+- URL must end with `/webhook` or your endpoint path
+- For security, always use a `secret_token`
+- Timeout: Webhook requests timeout after **60 seconds**
 
 ## ✨ Key Features
 
