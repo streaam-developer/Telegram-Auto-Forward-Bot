@@ -28,6 +28,8 @@ DESTINATION_CHANNEL_ID=your_destination_channel_id
 ADMIN_ID=your_telegram_user_id
 VERCEL_URL=your_App_name.vercel.app
 ```
+## Note 
+# Replace your webhookUrl `bot.js` file line No `515`
 
 ## ✨ Key Features
 
